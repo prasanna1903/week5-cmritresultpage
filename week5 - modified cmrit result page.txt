@@ -1,0 +1,31 @@
+week5 - modified cmrit result page
+
+package selenium;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+
+import org.openqa.selenium.support.ui.Select;
+
+
+public class exp4 {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver =new ChromeDriver();
+		driver.get("https://results.cmrithyderabad.edu.in/");
+		WebElement btech=driver.findElement(By.xpath("/html/body/div[3]/div[1]/form/div[3]/ul/li[2]/input"));
+		btech.click();
+		WebElement reg=driver.findElement(By.xpath("/html/body/div[3]/div[1]/form/div[4]/ul/li[2]/input"));
+		reg.click();
+		Thread.sleep(20000);
+		WebElement sem=driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/a[1]"));
+		sem.click();
+		WebElement hall=driver.findElement(By.xpath("/html/body/div[4]/div/div[2]/div/form/input"));
+		hall.sendKeys("22r01a05l8");
+		hall.sendKeys(Keys.ENTER);
+		
+		
+		}
+}
